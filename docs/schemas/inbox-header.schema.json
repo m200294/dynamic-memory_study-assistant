@@ -1,0 +1,55 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "date": {
+      "format": "date",
+      "title": "Date",
+      "type": "string"
+    },
+    "model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model"
+    },
+    "session_type": {
+      "enum": [
+        "learn",
+        "revise",
+        "other"
+      ],
+      "title": "Session Type",
+      "type": "string"
+    },
+    "source": {
+      "enum": [
+        "codex",
+        "chatgpt",
+        "voice-note",
+        "other"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "week": {
+      "maximum": 12,
+      "minimum": 1,
+      "title": "Week",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "source",
+    "session_type",
+    "week",
+    "date"
+  ],
+  "title": "InboxHeader",
+  "type": "object"
+}

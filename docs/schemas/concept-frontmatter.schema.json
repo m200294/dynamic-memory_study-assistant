@@ -1,0 +1,170 @@
+{
+  "$defs": {
+    "ProbeHistoryEntry": {
+      "additionalProperties": false,
+      "description": "Derived cache entry in a concept file. Built by compile.py, not LLM.",
+      "properties": {
+        "bloom_level": {
+          "enum": [
+            "remember",
+            "understand",
+            "apply",
+            "analyze",
+            "evaluate"
+          ],
+          "title": "Bloom Level",
+          "type": "string"
+        },
+        "date": {
+          "format": "date",
+          "title": "Date",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "weak",
+            "mid",
+            "good",
+            "solid"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "probe_id": {
+          "minLength": 1,
+          "title": "Probe Id",
+          "type": "string"
+        },
+        "question": {
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "session_file": {
+          "minLength": 1,
+          "title": "Session File",
+          "type": "string"
+        },
+        "with_prompting": {
+          "default": false,
+          "title": "With Prompting",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "probe_id",
+        "date",
+        "bloom_level",
+        "question",
+        "outcome",
+        "session_file"
+      ],
+      "title": "ProbeHistoryEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "also_in_weeks": {
+      "items": {
+        "type": "integer"
+      },
+      "title": "Also In Weeks",
+      "type": "array"
+    },
+    "last_revised": {
+      "format": "date",
+      "title": "Last Revised",
+      "type": "string"
+    },
+    "last_studied": {
+      "format": "date",
+      "title": "Last Studied",
+      "type": "string"
+    },
+    "layer_reached": {
+      "maximum": 4,
+      "minimum": 1,
+      "title": "Layer Reached",
+      "type": "integer"
+    },
+    "mastery": {
+      "additionalProperties": {
+        "enum": [
+          "weak",
+          "mid",
+          "good",
+          "solid",
+          "untested"
+        ],
+        "type": "string"
+      },
+      "propertyNames": {
+        "enum": [
+          "remember",
+          "understand",
+          "apply",
+          "analyze",
+          "evaluate"
+        ]
+      },
+      "title": "Mastery",
+      "type": "object"
+    },
+    "probe_history": {
+      "items": {
+        "$ref": "#/$defs/ProbeHistoryEntry"
+      },
+      "title": "Probe History",
+      "type": "array"
+    },
+    "slug": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Slug",
+      "type": "string"
+    },
+    "solid_connections": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Solid Connections",
+      "type": "array"
+    },
+    "sources": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Sources",
+      "type": "array"
+    },
+    "title": {
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "weak_spots": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Weak Spots",
+      "type": "array"
+    },
+    "week": {
+      "maximum": 12,
+      "minimum": 1,
+      "title": "Week",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "week",
+    "mastery",
+    "layer_reached",
+    "last_studied",
+    "last_revised"
+  ],
+  "title": "ConceptFrontmatter",
+  "type": "object"
+}

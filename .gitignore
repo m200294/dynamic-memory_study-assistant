@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+# Runtime logs and state
+scripts/*.log
+scripts/state.json
+scripts/last-flush.json
+scripts/session-flush-*.md
+
+# Local environment files
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,243 @@
+{
+  "$defs": {
+    "ProbeObserved": {
+      "additionalProperties": false,
+      "description": "One Q&A pair from a revise session. Nested under SessionConcept.",
+      "properties": {
+        "answer_summary": {
+          "default": "",
+          "title": "Answer Summary",
+          "type": "string"
+        },
+        "bloom_level": {
+          "enum": [
+            "remember",
+            "understand",
+            "apply",
+            "analyze",
+            "evaluate"
+          ],
+          "title": "Bloom Level",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "weak",
+            "mid",
+            "good",
+            "solid"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "probe_context": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Probe Context"
+        },
+        "probe_id": {
+          "minLength": 1,
+          "title": "Probe Id",
+          "type": "string"
+        },
+        "question": {
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "with_prompting": {
+          "default": false,
+          "title": "With Prompting",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "probe_id",
+        "bloom_level",
+        "question",
+        "outcome"
+      ],
+      "title": "ProbeObserved",
+      "type": "object"
+    },
+    "SessionConcept": {
+      "additionalProperties": false,
+      "properties": {
+        "bloom_levels_probed": {
+          "items": {
+            "enum": [
+              "remember",
+              "understand",
+              "apply",
+              "analyze",
+              "evaluate"
+            ],
+            "type": "string"
+          },
+          "title": "Bloom Levels Probed",
+          "type": "array"
+        },
+        "layer_reached": {
+          "maximum": 4,
+          "minimum": 1,
+          "title": "Layer Reached",
+          "type": "integer"
+        },
+        "probes": {
+          "items": {
+            "$ref": "#/$defs/ProbeObserved"
+          },
+          "title": "Probes",
+          "type": "array"
+        },
+        "ratings_observed": {
+          "additionalProperties": {
+            "enum": [
+              "weak",
+              "mid",
+              "good",
+              "solid",
+              "untested"
+            ],
+            "type": "string"
+          },
+          "propertyNames": {
+            "enum": [
+              "remember",
+              "understand",
+              "apply",
+              "analyze",
+              "evaluate"
+            ]
+          },
+          "title": "Ratings Observed",
+          "type": "object"
+        },
+        "slug": {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "title": "Slug",
+          "type": "string"
+        },
+        "solid_connections": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Solid Connections",
+          "type": "array"
+        },
+        "sources_consulted": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sources Consulted",
+          "type": "array"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "weak_spots": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Weak Spots",
+          "type": "array"
+        }
+      },
+      "required": [
+        "slug",
+        "layer_reached"
+      ],
+      "title": "SessionConcept",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "concepts": {
+      "items": {
+        "$ref": "#/$defs/SessionConcept"
+      },
+      "title": "Concepts",
+      "type": "array"
+    },
+    "date": {
+      "format": "date",
+      "title": "Date",
+      "type": "string"
+    },
+    "model": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model"
+    },
+    "primary_concept": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Primary Concept",
+      "type": "string"
+    },
+    "session_id": {
+      "minLength": 1,
+      "title": "Session Id",
+      "type": "string"
+    },
+    "session_type": {
+      "enum": [
+        "learn",
+        "revise",
+        "other"
+      ],
+      "title": "Session Type",
+      "type": "string"
+    },
+    "source": {
+      "enum": [
+        "claude",
+        "codex",
+        "chatgpt",
+        "voice-note",
+        "other"
+      ],
+      "title": "Source",
+      "type": "string"
+    },
+    "week": {
+      "maximum": 12,
+      "minimum": 1,
+      "title": "Week",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "session_type",
+    "source",
+    "session_id",
+    "week",
+    "date",
+    "primary_concept"
+  ],
+  "title": "SessionLogFrontmatter",
+  "type": "object"
+}

@@ -1,0 +1,37 @@
+# Copy this repo, then edit this file for your own class or exam.
+
+student_name: "the student"
+subject_name: "Your subject"
+subject_code: ""
+
+# Optional. If semester_start is blank, hooks assume week 1.
+semester_start:
+midterm_date:
+final_date:
+total_weeks: 12
+
+# Local hour when flush.py may auto-run compile.py after a session ends.
+compile_after_hour: 18
+
+# Claude Agent SDK model used by flush.py, ingest.py, and compile.py.
+llm_model: "claude-sonnet-4-6"
+
+weeks:
+  1: "Getting started"
+  2: "Core ideas"
+  3: "Practice and application"
+  4: "Review"
+  5: "Topic 5"
+  6: "Topic 6"
+  7: "Topic 7"
+  8: "Topic 8"
+  9: "Topic 9"
+  10: "Topic 10"
+  11: "Topic 11"
+  12: "Topic 12"
+
+week_to_topic:
+  1: "Foundation"
+  2: "Foundation"
+  3: "Application"
+  4: "Application"
