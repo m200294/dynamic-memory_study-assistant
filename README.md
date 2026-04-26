@@ -1,3 +1,25 @@
+<p align="center">
+  <img width="1499" height="1049" alt="lookatthis" src="https://github.com/user-attachments/assets/1c183f6b-30ff-4dbe-a8f3-7bcb649597ce" />
+</p>
+
+<div style="height: 48px;"></div>
+
+<p align="center">
+  <img width="1536" height="1024" alt="LATP2" src="https://github.com/user-attachments/assets/3e598446-a143-4e80-b157-a89da44576de" />
+</p>
+
+# Progress dashboard example 
+<img width="1054" height="762" alt="image" src="https://github.com/user-attachments/assets/026fb75f-ed2b-432f-b907-18ef257446fc" />
+
+# Week log example 
+<img width="946" height="924" alt="image" src="https://github.com/user-attachments/assets/2ba6b9b0-fc50-4aeb-b645-12ee025e288a" />
+
+# Concepts log example 
+<img width="933" height="855" alt="image" src="https://github.com/user-attachments/assets/a5593be5-7b62-41e7-99e3-562214968458" />
+
+
+
+
 # Study Memory Pipeline
 
 A local, file-based study system for turning conversations into tracked mastery.
@@ -13,14 +35,24 @@ probes, and progress by week.
 
 ## What It Does
 
-- Reads your course material before study sessions.
-- Guides learn/revise sessions using a deep-encoding protocol.
+- Reads course material dropped into the current week folder before study sessions.
+- Guides learn/revise sessions using a custom made deep-encoding protocol skill.
 - Saves session evidence when a Claude Code session ends or compacts.
 - Compiles evidence into per-concept mastery files.
 - Tracks weak spots and unresolved revision probes.
 - Builds a progress dashboard by week and Bloom level.
 - Accepts external notes from Codex, ChatGPT, voice notes, or manual summaries.
 - Provides a Codex fallback when Claude usage is unavailable.
+
+# Examples
+
+## saved session evidence
+<img width="1920" height="1078" alt="image" src="https://github.com/user-attachments/assets/08244cca-1c81-4cc8-bf40-f6c4be106793" />
+
+## Sessoin compiler log:
+<img width="1899" height="799" alt="image" src="https://github.com/user-attachments/assets/0faa63d4-5119-4205-932e-bb4aef67b43d" />
+
+
 
 Everything is plain files. There is no database, daemon, hosted service, or
 vendor lock-in.
