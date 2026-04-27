@@ -12,7 +12,8 @@
 <img width="1054" height="762" alt="image" src="https://github.com/user-attachments/assets/026fb75f-ed2b-432f-b907-18ef257446fc" />
 
 # Week log example 
-<img width="946" height="924" alt="image" src="https://github.com/user-attachments/assets/2ba6b9b0-fc50-4aeb-b645-12ee025e288a" />
+<img width="1828" height="949" alt="image" src="https://github.com/user-attachments/assets/f2d3c1e8-1770-4ead-9218-b3109d400955" />
+
 
 # Concepts log example 
 <img width="1909" height="1039" alt="image" src="https://github.com/user-attachments/assets/a86593b4-eb13-432c-81ff-3081ccab5edd" />
