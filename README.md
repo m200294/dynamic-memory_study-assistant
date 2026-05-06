@@ -9,7 +9,8 @@
 </p>
 
 # Progress dashboard example 
-<img width="1054" height="762" alt="image" src="https://github.com/user-attachments/assets/026fb75f-ed2b-432f-b907-18ef257446fc" />
+<img width="1899" height="922" alt="screenshot-2026-05-06_05-17-27" src="https://github.com/user-attachments/assets/8be4823c-5f6a-453f-acbc-e78b82162a51" />
+
 
 # Week log example 
 <img width="1828" height="949" alt="image" src="https://github.com/user-attachments/assets/f2d3c1e8-1770-4ead-9218-b3109d400955" />
