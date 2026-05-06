@@ -52,7 +52,8 @@ probes, and progress by week.
 # Examples
 
 ## saved session evidence
-<img width="1920" height="1078" alt="image" src="https://github.com/user-attachments/assets/08244cca-1c81-4cc8-bf40-f6c4be106793" />
+<img width="1896" height="1017" alt="screenshot-2026-05-06_05-25-59" src="https://github.com/user-attachments/assets/4081e1c6-c9f4-4a9d-9770-59060c9aec58" />
+
 
 ## Sessoin compiler log:
 <img width="1899" height="799" alt="image" src="https://github.com/user-attachments/assets/0faa63d4-5119-4205-932e-bb4aef67b43d" />
