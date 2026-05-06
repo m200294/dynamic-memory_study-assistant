@@ -13,7 +13,8 @@
 
 
 # Week log example 
-<img width="1828" height="949" alt="image" src="https://github.com/user-attachments/assets/f2d3c1e8-1770-4ead-9218-b3109d400955" />
+<img width="1873" height="660" alt="screenshot-2026-05-06_05-22-55" src="https://github.com/user-attachments/assets/df38111a-6cce-4267-810e-795cd8827f10" />
+
 
 
 # Concepts log example 
