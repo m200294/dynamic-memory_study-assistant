@@ -17,7 +17,8 @@
 
 
 # Concepts log example 
-<img width="1909" height="1039" alt="image" src="https://github.com/user-attachments/assets/a86593b4-eb13-432c-81ff-3081ccab5edd" />
+<img width="1900" height="948" alt="screenshot-2026-05-06_05-20-14" src="https://github.com/user-attachments/assets/ea82c0bc-6324-4366-b0bb-9f560619c82b" />
+
 
 
 
